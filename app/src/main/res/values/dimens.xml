@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">7dp</dimen>
+    <dimen name="margin_big">30dp</dimen>
+    <dimen name="text_size">23sp</dimen>
+    <dimen name="corner_radius">4dp</dimen>
+</resources>
