@@ -3,6 +3,7 @@
     <dimen name="margin">2dp</dimen>
     <dimen name="margin_big">30dp</dimen>
     <dimen name="text_size">26sp</dimen>
+    <dimen name="text_size_big">37sp</dimen>
     <dimen name="corner_radius">4dp</dimen>
     <dimen name="stroke_width">1dp</dimen>
     <dimen name="thumbnail_height">200dp</dimen>
