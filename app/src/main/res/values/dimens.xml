@@ -7,5 +7,5 @@
     <dimen name="corner_radius">4dp</dimen>
     <dimen name="stroke_width">1dp</dimen>
     <dimen name="thumbnail_height">200dp</dimen>
-    <dimen name="padding">10dp</dimen>
+    <dimen name="padding">8dp</dimen>
 </resources>
