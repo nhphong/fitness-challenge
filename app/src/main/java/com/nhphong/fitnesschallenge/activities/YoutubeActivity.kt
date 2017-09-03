@@ -6,7 +6,7 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.nhphong.fitnesschallenge.R
-import com.nhphong.fitnesschallenge.YoutubeFragment
+import com.nhphong.fitnesschallenge.fragments.YoutubeFragment
 import com.nhphong.fitnesschallenge.databinding.ActivityYoutubeBinding
 
 class YoutubeActivity: AppCompatActivity() {

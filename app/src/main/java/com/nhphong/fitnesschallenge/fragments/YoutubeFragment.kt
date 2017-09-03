@@ -1,4 +1,4 @@
-package com.nhphong.fitnesschallenge
+package com.nhphong.fitnesschallenge.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerFragment
+import com.nhphong.fitnesschallenge.BuildConfig
 
 class YoutubeFragment : YouTubePlayerFragment(), YouTubePlayer.OnInitializedListener {
     companion object {
