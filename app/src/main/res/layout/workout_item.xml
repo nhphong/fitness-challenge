@@ -12,7 +12,14 @@
             android:scaleType="centerCrop"
             app:riv_corner_radius="@dimen/corner_radius"
             app:riv_border_width="@dimen/stroke_width"
-            app:riv_border_color="@color/gray"/>
+            app:riv_border_color="@color/white"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/transparent_black"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/corner_radius"/>
 
         <TextView
             android:id="@+id/tv_type"
@@ -22,7 +29,6 @@
             android:textSize="@dimen/text_size_big"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:background="@color/transparent_black"
             android:textAllCaps="true"/>
 
     </RelativeLayout>
