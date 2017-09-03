@@ -67,7 +67,7 @@ class ProgressTimerView(context: Context, attrs: AttributeSet): FrameLayout(cont
             canvas?.drawRoundRect(boundingRect.apply {
                 right = left + currentProgress * (canvas.width - 2 * sHalfWidth)
             }, radius, radius, paint.apply {
-                color = getColor(R.color.green)
+                color = getColor(R.color.green_light)
             })
 
             if (currentProgress < 1f) {
