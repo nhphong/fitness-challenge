@@ -21,6 +21,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.YoutubeActivity" />
+        <activity android:name=".activities.YoutubeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="sensor"/>
     </application>
 </manifest>

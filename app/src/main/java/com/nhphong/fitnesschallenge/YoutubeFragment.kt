@@ -12,20 +12,21 @@ import com.google.android.youtube.player.YouTubePlayerFragment
 
 class YoutubeFragment : YouTubePlayerFragment(), YouTubePlayer.OnInitializedListener {
     companion object {
-        private const val ARG_VIDEO_URL = "Argument Video Url"
+        private const val ARG_VIDEO_ID = "Argument Video Id"
         private const val RECOVERY_DIALOG_REQUEST_CODE = 100
 
-        fun newInstance(videoUrl: String) = YoutubeFragment().apply {
+        fun newInstance(videoId: String) = YoutubeFragment().apply {
             arguments = Bundle().apply {
-                putString(ARG_VIDEO_URL, videoUrl)
+                putString(ARG_VIDEO_ID, videoId)
             }
         }
     }
 
-    private lateinit var videoUrl: String
+    private lateinit var videoId: String
+    private var player: YouTubePlayer? = null
 
     override fun onCreateView(inflater: LayoutInflater?, viewGroup: ViewGroup?, bundle: Bundle?): View {
-        videoUrl = arguments.getString(ARG_VIDEO_URL)
+        videoId = arguments.getString(ARG_VIDEO_ID)
         initialize(BuildConfig.GOOGLE_APP_KEY, this)
         return super.onCreateView(inflater, viewGroup, bundle)
     }
@@ -36,8 +37,9 @@ class YoutubeFragment : YouTubePlayerFragment(), YouTubePlayer.OnInitializedList
         }
     }
 
-    override fun onInitializationSuccess(provider: YouTubePlayer.Provider?, player: YouTubePlayer?, wasRestored: Boolean) {
-        player?.cueVideo(videoUrl)
+    override fun onInitializationSuccess(provider: YouTubePlayer.Provider?, youtubePlayer: YouTubePlayer?, wasRestored: Boolean) {
+        player = youtubePlayer
+        player?.cueVideo(videoId)
     }
 
     override fun onInitializationFailure(provider: YouTubePlayer.Provider?, errorReason: YouTubeInitializationResult?) {
