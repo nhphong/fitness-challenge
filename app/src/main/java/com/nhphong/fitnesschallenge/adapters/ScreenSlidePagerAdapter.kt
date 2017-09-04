@@ -16,4 +16,6 @@ class ScreenSlidePagerAdapter(fragmentManager: FragmentManager)
     override fun getItem(position: Int) = pages[position]
 
     override fun getCount() = pages.size
+
+    override fun getPageTitle(position: Int): String = pages[position].getTitle()
 }

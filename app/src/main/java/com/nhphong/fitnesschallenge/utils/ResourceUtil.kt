@@ -15,3 +15,5 @@ fun getColor(id: Int): Int {
 
 
 fun getDimen(id: Int) = App.instance.resources.getDimensionPixelSize(id)
+
+fun getString(id: Int) = App.instance.resources.getString(id)

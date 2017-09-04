@@ -18,6 +18,7 @@ class MainActivity: AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setSupportActionBar(binding.toolbar)
         binding.viewPager.adapter = ScreenSlidePagerAdapter(supportFragmentManager)
+        binding.tabLayout.setupWithViewPager(binding.viewPager)
     }
 
     override fun attachBaseContext(newBase: Context?) {
