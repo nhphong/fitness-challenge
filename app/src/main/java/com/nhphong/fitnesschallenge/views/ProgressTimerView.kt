@@ -9,8 +9,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import com.nhphong.fitnesschallenge.R
 import com.nhphong.fitnesschallenge.databinding.ViewProgressTimerBinding
-import com.nhphong.fitnesschallenge.utils.getColor
-import com.nhphong.fitnesschallenge.utils.getDimen
+import com.nhphong.fitnesschallenge.utils.ResourceUtil
 import com.nhphong.fitnesschallenge.view_models.ProgressTimerViewModel
 import io.reactivex.disposables.CompositeDisposable
 
@@ -19,8 +18,8 @@ class ProgressTimerView(context: Context, attrs: AttributeSet): FrameLayout(cont
     private val viewModel = ProgressTimerViewModel()
     private var disposable = CompositeDisposable()
     private val boundingRect = RectF()
-    private val radius = getDimen(R.dimen.corner_radius).toFloat()
-    private val sHalfWidth = getDimen(R.dimen.stroke_width) / 2f
+    private val radius = ResourceUtil.getDimen(R.dimen.corner_radius).toFloat()
+    private val sHalfWidth = ResourceUtil.getDimen(R.dimen.stroke_width) / 2f
     private var currentProgress = 0f
     private val paint = Paint().apply {
         strokeWidth = sHalfWidth * 2
@@ -60,14 +59,14 @@ class ProgressTimerView(context: Context, attrs: AttributeSet): FrameLayout(cont
             bottom = canvas.height - sHalfWidth
         }, radius, radius, paint.apply {
             style = Paint.Style.FILL
-            color = getColor(R.color.gray)
+            color = ResourceUtil.getColor(R.color.gray)
         })
 
         if (currentProgress > 0f) {
             canvas?.drawRoundRect(boundingRect.apply {
                 right = left + currentProgress * (canvas.width - 2 * sHalfWidth)
             }, radius, radius, paint.apply {
-                color = getColor(R.color.green_light)
+                color = ResourceUtil.getColor(R.color.green_light)
             })
 
             if (currentProgress < 1f) {
@@ -82,7 +81,7 @@ class ProgressTimerView(context: Context, attrs: AttributeSet): FrameLayout(cont
             bottom = canvas.height - sHalfWidth
         }, radius, radius, paint.apply {
             style = Paint.Style.STROKE
-            color = getColor(R.color.light_gray)
+            color = ResourceUtil.getColor(R.color.light_gray)
         })
 
         super.dispatchDraw(canvas)

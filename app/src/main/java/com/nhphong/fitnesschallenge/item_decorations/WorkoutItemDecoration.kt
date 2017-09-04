@@ -4,10 +4,10 @@ import android.graphics.Rect
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.nhphong.fitnesschallenge.R
-import com.nhphong.fitnesschallenge.utils.getDimen
+import com.nhphong.fitnesschallenge.utils.ResourceUtil
 
 class WorkoutItemDecoration: RecyclerView.ItemDecoration() {
-    private val space = getDimen(R.dimen.padding)
+    private val space = ResourceUtil.getDimen(R.dimen.padding)
 
     override fun getItemOffsets(outRect: Rect?, view: View?, parent: RecyclerView?, state: RecyclerView.State?) {
         val position = parent?.getChildLayoutPosition(view)
