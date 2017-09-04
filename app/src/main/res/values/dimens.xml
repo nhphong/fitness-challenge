@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin">2dp</dimen>
-    <dimen name="margin_big">30dp</dimen>
+    <dimen name="margin_big">3dp</dimen>
+    <dimen name="margin_big_neg">-3dp</dimen>
+    <dimen name="text_size_small">11sp</dimen>
     <dimen name="text_size">26sp</dimen>
     <dimen name="text_size_big">37sp</dimen>
     <dimen name="corner_radius">4dp</dimen>
@@ -9,4 +11,5 @@
     <dimen name="thumbnail_height">200dp</dimen>
     <dimen name="padding">8dp</dimen>
     <dimen name="elevation">4dp</dimen>
+    <dimen name="zero">0dp</dimen>
 </resources>

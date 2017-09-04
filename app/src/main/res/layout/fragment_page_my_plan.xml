@@ -9,7 +9,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:textAllCaps="true"
-            android:text="Instructions"
+            android:text="My Plan"
             android:textSize="@dimen/text_size"
             android:textStyle="bold"/>
     </RelativeLayout>
