@@ -3,8 +3,6 @@ package com.nhphong.fitnesschallenge
 import android.app.Application
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig
 
-
-
 class App: Application() {
     companion object {
         lateinit var instance: App

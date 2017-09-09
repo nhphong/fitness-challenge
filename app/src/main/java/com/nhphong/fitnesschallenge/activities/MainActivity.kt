@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
+import com.nhphong.fitnesschallenge.Firebase
 import com.nhphong.fitnesschallenge.R
 import com.nhphong.fitnesschallenge.adapters.ScreenSlidePagerAdapter
 import com.nhphong.fitnesschallenge.databinding.ActivityMainBinding
@@ -18,6 +19,7 @@ class MainActivity: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Firebase.getInstance().fetchRemoteConfigs(this)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setSupportActionBar(binding.toolbar)
         adapter = ScreenSlidePagerAdapter(supportFragmentManager)

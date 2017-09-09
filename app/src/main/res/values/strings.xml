@@ -3,4 +3,5 @@
     <string name="default_time">00:00</string>
     <string name="instructions">Instructions</string>
     <string name="my_plan">My Plan</string>
+    <string name="failed_to_load_firebase_rc">Failed to load Firebase Remote Configs</string>
 </resources>
