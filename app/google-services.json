@@ -1,38 +1,35 @@
 {
   "project_info": {
-    "project_number": "889013813373",
-    "firebase_url": "https://fitness-challenge-62c0a.firebaseio.com",
-    "project_id": "fitness-challenge-62c0a",
-    "storage_bucket": "fitness-challenge-62c0a.appspot.com"
+    "project_number": "5052352588",
+    "firebase_url": "https://fitness-challenge-178806.firebaseio.com",
+    "project_id": "fitness-challenge-178806",
+    "storage_bucket": "fitness-challenge-178806.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:889013813373:android:8c285c962997f8f8",
+        "mobilesdk_app_id": "1:5052352588:android:8c285c962997f8f8",
         "android_client_info": {
           "package_name": "com.nhphong.fitnesschallenge"
         }
       },
       "oauth_client": [
         {
-          "client_id": "889013813373-ro242mqje6t1871c8nbjkbk9as3eq0t7.apps.googleusercontent.com",
+          "client_id": "5052352588-55jtsohljo219doov5t64v0uars3e489.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.nhphong.fitnesschallenge",
-            "certificate_hash": "6e15d638511c6b5608cc6b249b25d50bbe3141d0"
+            "certificate_hash": "d81f12bc9e26064efb46b076268f6b8511329195"
           }
         },
         {
-          "client_id": "889013813373-o8nte6eoafdm5mh8700tncm9hglovm23.apps.googleusercontent.com",
+          "client_id": "5052352588-chu24enqho11p13i5f784uo3dacorcmp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBxZkp0a7aiM_HwGd9B_roLYhasi7zewPk"
-        },
-        {
-          "current_key": "AIzaSyDHNEEcnCax7mCkagpM7FfqrX5tNnMqz5E"
+          "current_key": "AIzaSyBAfJrfE9KOrx9CBy6MzfA6uQt6eUpAr9k"
         }
       ],
       "services": {
@@ -43,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "889013813373-o8nte6eoafdm5mh8700tncm9hglovm23.apps.googleusercontent.com",
+              "client_id": "5052352588-chu24enqho11p13i5f784uo3dacorcmp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
