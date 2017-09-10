@@ -1,6 +1,7 @@
 package com.nhphong.fitnesschallenge
 
 import android.app.Activity
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.nhphong.fitnesschallenge.misc.IGNORE
@@ -21,7 +22,7 @@ class Firebase private constructor() {
         }
     }
 
-    val database = FirebaseDatabase.getInstance().reference
+    val database: DatabaseReference = FirebaseDatabase.getInstance().reference
     val remoteConfig: FirebaseRemoteConfig = FirebaseRemoteConfig.getInstance().apply {
         setDefaults(R.xml.remote_config_defaults)
     }

@@ -14,13 +14,19 @@ class WorkoutAdapterPresenter(private val view: WorkoutAdapter) {
         newData?.apply {
             data.addAll(this)
         }
+        view.notifyDataSetChanged()
     }
 
     fun bindViewHolder(holder: WorkoutAdapter.Holder?, position: Int) {
         val item = data[position]
-        if (!TextUtils.isEmpty(item.imageUrl) && view.isActive()) {
-            view.loadImage(item.imageUrl, holder)
+        if (!TextUtils.isEmpty(item.image) && view.isActive()) {
+            view.loadImage(item.image, holder)
         }
-        view.loadText(item.type.toString(), holder)
+        view.loadText(item.type, holder)
+        if (!TextUtils.isEmpty(item.video)) {
+            view.setOnItemClickListener(item.video, holder)
+        } else {
+            view.removeOnItemClickListener(holder)
+        }
     }
 }

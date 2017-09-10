@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.nhphong.fitnesschallenge.R
+import com.nhphong.fitnesschallenge.activities.YoutubeActivity
 import com.nhphong.fitnesschallenge.databinding.WorkoutItemBinding
 import com.nhphong.fitnesschallenge.models.Workout
 import com.nhphong.fitnesschallenge.modules.GlideApp
@@ -26,17 +27,31 @@ class WorkoutAdapter(private val fragment: Fragment): RecyclerView.Adapter<Worko
 
     override fun getItemCount(): Int = presenter.itemCount()
 
+    fun refresh(workouts: ArrayList<Workout>) {
+        presenter.refresh(workouts)
+    }
+
     fun isActive() = fragment.isAdded
 
-    fun loadImage(imageUrl: String, holder: Holder?) {
+    fun loadImage(image: String, holder: Holder?) {
         GlideApp.with(fragment)
-                .load(imageUrl)
+                .load(image)
                 .placeholder(R.color.white)
                 .into(holder?.binding?.ivWorkout)
     }
 
     fun loadText(text: String, holder: WorkoutAdapter.Holder?) {
         holder?.binding?.tvType?.text = text
+    }
+
+    fun setOnItemClickListener(video: String, holder: Holder?) {
+        holder?.binding?.root?.setOnClickListener {
+            YoutubeActivity.launch(fragment.context, video)
+        }
+    }
+
+    fun removeOnItemClickListener(holder: Holder?) {
+        holder?.binding?.root?.setOnClickListener(null)
     }
 
     class Holder(val binding: WorkoutItemBinding): RecyclerView.ViewHolder(binding.root)
